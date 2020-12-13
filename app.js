@@ -14,9 +14,15 @@ const config = {
 
 const client = new line.Client(config);
 
+app.get('/',async (req,res)=>
+{
+    res.send('ok');
+})
+
 app.post('/webhook',async (req,res) =>
 {
     let request = req.body.events[0].replyToken
+    res.send('Work')
 })
 
 app.listen(4000,console.log('server is working'))
