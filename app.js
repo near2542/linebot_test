@@ -18,6 +18,10 @@ app.get('/',async (req,res)=>
 {
     res.send('ok');
 })
+app.get('/test',async (req,res)=>
+{
+    res.send('ok');
+})
 
 app.post('/webhook',async (req,res) =>
 {
@@ -25,4 +29,4 @@ app.post('/webhook',async (req,res) =>
     res.send('Work')
 })
 
-app.listen(4000,console.log('server is working'))
+app.listen(PORT,console.log('server is working'))
