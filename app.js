@@ -30,6 +30,8 @@ app.post('/webhook',(req,res) =>
     let text = req.body.events[0].message.text
     let user = req.body.events[0].source.userId
 
+    console.log(req.body)
+
     const message = {
         type:'text',
         text:'its working',
