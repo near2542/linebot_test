@@ -47,8 +47,8 @@ app.post('/webhook',(req,res) =>
     const message3 = 
         {
             "type": "image",
-            "originalContentUrl": "https://example.com/original.jpg",
-            "previewImageUrl": "https://example.com/preview.jpg"
+            "originalContentUrl": "https://scontent-kut2-1.xx.fbcdn.net/v/t1.0-9/117892868_3165357106881401_2541502139840212849_n.jpg?_nc_cat=108&ccb=2&_nc_sid=09cbfe&_nc_eui2=AeF8F1dLVZbSM1o4hYsNHdhcE05lkXgQmnATTmWReBCacAeXgBbsqQgLwRomnfJGHbZn0P16xNItC6jxcUgTZA99&_nc_ohc=dO_JwQTJ6WsAX-Fh91m&_nc_ht=scontent-kut2-1.xx&oh=a55b878dbfccf2997b986bb335650ec0&oe=5FFD97DD",
+            "previewImageUrl": "https://scontent-kut2-1.xx.fbcdn.net/v/t1.0-9/117892868_3165357106881401_2541502139840212849_n.jpg?_nc_cat=108&ccb=2&_nc_sid=09cbfe&_nc_eui2=AeF8F1dLVZbSM1o4hYsNHdhcE05lkXgQmnATTmWReBCacAeXgBbsqQgLwRomnfJGHbZn0P16xNItC6jxcUgTZA99&_nc_ohc=dO_JwQTJ6WsAX-Fh91m&_nc_ht=scontent-kut2-1.xx&oh=a55b878dbfccf2997b986bb335650ec0&oe=5FFD97DD"
         }
           
     
