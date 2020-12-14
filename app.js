@@ -23,13 +23,14 @@ const client = new line.Client(config);
 app.post('/webhook',async (req,res) =>
 {
 
-    console.log(req.body);
     
     let request = req.body.events[0].replyToken
-    console.log(`request is ${request}`)
     let text = req.body.events[0].message.text
     let user = req.body.events[0].source.userId
-
+    console.log(`request is ${request} \n 
+                    text is ${text}\n
+                    user is ${user}`)
+   
 
 
     const message = {
