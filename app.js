@@ -38,7 +38,14 @@ app.post('/webhook',(req,res) =>
         text:'its working',
     };
 
-    client.replyMessage(request,message)
+    const message2 = {
+
+            type: "text",
+            text: "\uDBC0\uDC84 LINE original emoji",
+          
+    }
+
+    client.replyMessage(request,[message,message2])
     .then(()=> console.log('work'))
     .catch(err=>console.error(err))
    
