@@ -17,7 +17,6 @@ const config = {
     channelSecret: channelSecret,
 }
 
-console.log(config)
 
 const client = new line.Client(config);
 
@@ -37,7 +36,7 @@ app.post('/webhook',(req,res) =>
         text:'its working',
     };
 
-    client.replyMessage(user,message)
+    client.replyMessage(request,message)
     .then(res => console.log(res))
     .then(()=> console.log('work'))
     .catch(err=>console.error(err))
