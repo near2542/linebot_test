@@ -18,7 +18,7 @@ const client = new line.Client(config);
 app.post('/webhook',async (req,res) =>
 {
 
-    console.log(req);
+    console.log(req.body);
     let request = req.body.events[0].replyToken
     let text = req.body.events[0].message.text
     let user = req.body.events[0].source.userId
