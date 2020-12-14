@@ -40,7 +40,7 @@ app.post('/webhook',(req,res) =>
 
     client.replyMessage(user,message)
     .then(res => console.log(res))
-    .then(res.statusCode(200))
+    .then(()=> console.log('work'))
     .catch(err=>console.err(err))
    
 
