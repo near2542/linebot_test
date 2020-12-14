@@ -20,7 +20,7 @@ console.log(config)
 const client = new line.Client(config);
 
 
-app.post('/webhook',async (req,res) =>
+app.post('/webhook',middleware(config),async (req,res) =>
 {
 
     
@@ -38,7 +38,7 @@ app.post('/webhook',async (req,res) =>
         text:`it's working bro!`,
     };
 
-    client.replyMessage(user,message)
+    client.replyMessage(user,message).catch(err=>console.err(err))
    
 
 })
