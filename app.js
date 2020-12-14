@@ -55,6 +55,8 @@ app.post('/webhook',(req,res) =>
 
     client.replyMessage(request,[message,message2,message3])
     .then(()=> console.log('work'))
+    .then(()=>{res.sendStatus(200)
+                console.log(`it's done`)})
     .catch(err=>console.error(err))
    
 
