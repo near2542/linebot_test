@@ -30,7 +30,7 @@ app.post('/webhook',async (req,res) =>
     let text = req.body.events[0].message.text
     let user = req.body.events[0].source.userId
 
-    if(!request) res.sendStatus(400);
+
 
     const message = {
         type:'text',
