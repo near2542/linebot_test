@@ -17,15 +17,14 @@ const client = new line.Client(config);
 
 app.post('/webhook',async (req,res) =>
 {
-    //let request = req.body.events[0].replyToken
-    //let text = req.body.events[0].message.text
-    //let user = req.body.events[0].source.userId
-//
-//
-    //client.replyMessage('user',`it's working bro!`)
-    //.catch(err => console.err(err))
+    let request = req.body.events[0].replyToken
+    let text = req.body.events[0].message.text
+    let user = req.body.events[0].source.userId
 
-    res.sendStatus(200);
+    if(!request ) res.sendStatus(400);
+
+    client.replyMessage('user',`it's working bro!`)
+    .catch(err => console.err(err))
 
 })
 
