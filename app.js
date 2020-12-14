@@ -5,6 +5,9 @@ const express = require('express');
 const app = express();
 app.use(express.bodyParser())
 const PORT = process.env.PORT || 4000
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 const channelAccessToken = process.env.access_token
 const channelSecret = process.env.channel_secret
