@@ -41,7 +41,7 @@ app.post('/webhook',(req,res) =>
     client.replyMessage(user,message)
     .then(res => console.log(res))
     .then(()=> console.log('work'))
-    .catch(err=>console.err(err))
+    .catch(err=>console.error(err))
    
 
 })
