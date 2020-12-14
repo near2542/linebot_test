@@ -15,6 +15,8 @@ const config = {
     channelSecret: channelSecret,
 }
 
+console.log(config)
+
 const client = new line.Client(config);
 
 
