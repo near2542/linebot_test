@@ -38,7 +38,10 @@ app.post('/webhook',async (req,res) =>
         text:`it's working bro!`,
     };
 
-    client.replyMessage(user,message).catch(err=>console.err(err))
+    client.replyMessage(user,message)
+    .then(res => console.log(res))
+    .then(res.statusCode(200))
+    .catch(err=>console.err(err))
    
 
 })
