@@ -24,11 +24,13 @@ app.post('/webhook',async (req,res) =>
 {
 
     console.log(req.body);
+    
     let request = req.body.events[0].replyToken
+    console.log(`request is ${request}`)
     let text = req.body.events[0].message.text
     let user = req.body.events[0].source.userId
 
-    if(!request ) res.sendStatus(400);
+    if(!request) res.sendStatus(400);
 
     const message = {
         type:'text',
