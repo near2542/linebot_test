@@ -31,13 +31,14 @@ app.post('/webhook',(req,res) =>
 
     console.log(req.body)
 
+    console.log(req.body.events[0])
+
     const message = {
         type:'text',
         text:'its working',
     };
 
     client.replyMessage(request,message)
-    .then(res => console.log(res))
     .then(()=> console.log('work'))
     .catch(err=>console.error(err))
    
