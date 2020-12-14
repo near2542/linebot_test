@@ -20,7 +20,7 @@ console.log(config)
 const client = new line.Client(config);
 
 
-app.post('/webhook',async (req,res) =>
+app.post('/webhook',(req,res) =>
 {
 
     
