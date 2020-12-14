@@ -44,8 +44,16 @@ app.post('/webhook',(req,res) =>
             text: "\uDBC0\uDC84 LINE original emoji",
           
     }
+    const message3 = 
+        {
+            "type": "image",
+            "originalContentUrl": "https://example.com/original.jpg",
+            "previewImageUrl": "https://example.com/preview.jpg"
+        }
+          
+    
 
-    client.replyMessage(request,[message,message2])
+    client.replyMessage(request,[message,message2,message3])
     .then(()=> console.log('work'))
     .catch(err=>console.error(err))
    
