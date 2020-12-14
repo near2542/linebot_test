@@ -32,7 +32,7 @@ app.post('/webhook',(req,res) =>
 
     const message = {
         type:'text',
-        text:`it's working bro!`,
+        text:'its working',
     };
 
     client.replyMessage(user,message)
