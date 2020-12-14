@@ -3,6 +3,7 @@ require('dotenv').config();
 const line = require('@line/bot-sdk');
 const express = require('express');
 const app = express();
+app.use(express.bodyParser())
 const PORT = process.env.PORT || 4000
 
 const channelAccessToken = process.env.access_token
@@ -25,7 +26,12 @@ app.post('/webhook',async (req,res) =>
 
     if(!request ) res.sendStatus(400);
 
-    client.replyMessage(user,`it's working bro!`)
+    const message = {
+        type:'text',
+        text:`it's working bro!`,
+    };
+
+    client.replyMessage(user,message)
    
 
 })
